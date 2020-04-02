@@ -1,6 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
 
+import Filter from './components/Filter';
+
 function App() {
   const [carState, setCarState] = useState({
     loading: true,
@@ -25,7 +27,7 @@ function App() {
   return carState.loading ? (
     <div>Loading...</div>
   ) : (
-    <div>Fetched successfully</div>
+    carState.filters.map(filter => <Filter />)
   );
 }
 
