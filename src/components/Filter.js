@@ -10,9 +10,11 @@ const StyledFilter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   background: #ffffff;
   padding: 20px;
   margin-bottom: 10px;
+  width: 500px;
 
   h3 {
     font-size: 24px;
