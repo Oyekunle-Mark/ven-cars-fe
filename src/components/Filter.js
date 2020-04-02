@@ -3,6 +3,7 @@ import Prop from 'prop-types';
 import { v4 } from 'uuid';
 
 import Country from './Country';
+import Color from './Color';
 
 const Filter = ({ start_year, end_year, gender, countries, colors }) => {
   const countryList = countries.split(',');
@@ -21,7 +22,7 @@ const Filter = ({ start_year, end_year, gender, countries, colors }) => {
       </div>
       <div>
         {colorList.map(color => (
-          <span key={v4()}>{color}</span>
+          <Color key={v4()} color={color} />
         ))}
       </div>
     </div>
