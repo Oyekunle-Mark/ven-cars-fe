@@ -8,8 +8,6 @@ import Filter from '../components/Filter';
 const StyledFiltersContainer = styled.div`
   display: flex;
   flex-direction: column;
-
-  padding: 10px;
 `;
 
 const FiltersContainer = ({ filters }) => {
