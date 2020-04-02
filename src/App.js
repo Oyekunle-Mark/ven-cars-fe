@@ -51,22 +51,26 @@ function App() {
 
   return (
     <div>
-      <Route
-        exact
-        path="/"
-        render={props =>
-          carState.loading ? (
-            <div>Loading...</div>
-          ) : (
-            <FiltersContainer {...props} filters={carState.filters} />
-          )
-        }
-      />
+      <StyledApp>
+        <StyledContainer>
+          <Route
+            exact
+            path="/"
+            render={props =>
+              carState.loading ? (
+                <div>Loading...</div>
+              ) : (
+                <FiltersContainer {...props} filters={carState.filters} />
+              )
+            }
+          />
 
-      <Route
-        path="/filter/:id"
-        render={props => <CarOwnersContainer {...props} />}
-      />
+          <Route
+            path="/filter/:id"
+            render={props => <CarOwnersContainer {...props} />}
+          />
+        </StyledContainer>
+      </StyledApp>
     </div>
   );
 }
