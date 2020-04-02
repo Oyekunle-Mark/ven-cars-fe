@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import FiltersContainer from './containers/FiltersContainer';
 import CarOwnersContainer from './containers/CarOwnersContainer';
@@ -9,18 +9,23 @@ import CarOwnersContainer from './containers/CarOwnersContainer';
 const StyledApp = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   min-height: 100vh;
   min-width: 100vw;
   background: #fafafa;
   color: #040404;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 16px;
 
   a {
     color: inherit;
     text-decoration: none;
   }
+`;
+
+const StyledContainer = styled.div`
+  max-width: 300px;
 `;
 
 function App() {
