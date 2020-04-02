@@ -17,10 +17,6 @@ const StyledCarOwner = styled.div`
   -webkit-box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
   -moz-box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
   box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
-
-  h4 {
-    font-size: 18px;
-  }
 `;
 
 const StyledImageContainer = styled.div`
@@ -29,6 +25,12 @@ const StyledImageContainer = styled.div`
   align-items: center;
 
   width: 150px;
+`;
+
+const StyledOwnerDetails = styled.div`
+  h4 {
+    font-size: 18px;
+  }
 `;
 
 const CarOwner = ({
@@ -48,7 +50,7 @@ const CarOwner = ({
       <CarImage />
     </StyledImageContainer>
 
-    <div>
+    <StyledOwnerDetails>
       <h4>
         {first_name} {last_name}
       </h4>
@@ -68,7 +70,7 @@ const CarOwner = ({
         <p>Email:{email}</p>
         <p>Bio: {bio}</p>
       </div>
-    </div>
+    </StyledOwnerDetails>
   </StyledCarOwner>
 );
 
