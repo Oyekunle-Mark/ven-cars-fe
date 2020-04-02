@@ -44,16 +44,24 @@ const StyledOwnerDetails = styled.div`
 
 const StyledCarMetaContainer = styled.div`
   display: flex;
+
+  margin-bottom: 10px;
 `;
 
 const StyledCarMeta = styled.div`
   display: flex;
   flex-direction: column;
 
+  margin-right: 10px;
+
   p {
     color: #7b7b7b;
     margin-bottom: 5px;
   }
+`;
+
+const StyledCarMetaColor = styled.div`
+  width: 10px;
 `;
 
 const CarOwner = ({
@@ -86,10 +94,10 @@ const CarOwner = ({
           <p>Year</p> <span>{car_model_year}</span>
         </StyledCarMeta>
         <StyledCarMeta>
-          <p>Color</p>{' '}
-          <span>
+          <p>Color</p>
+          <StyledCarMetaColor>
             <Color color={car_color} />
-          </span>
+          </StyledCarMetaColor>
         </StyledCarMeta>
       </StyledCarMetaContainer>
 
