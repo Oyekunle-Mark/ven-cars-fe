@@ -7,8 +7,6 @@ import CarImage from './CarImage';
 
 const StyledCarOwner = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
 
   background: #ffffff;
   padding: 20px;
@@ -25,6 +23,14 @@ const StyledCarOwner = styled.div`
   }
 `;
 
+const StyledImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+`;
+
 const CarOwner = ({
   first_name,
   last_name,
@@ -38,26 +44,30 @@ const CarOwner = ({
   bio,
 }) => (
   <StyledCarOwner>
-    <CarImage />
+    <StyledImageContainer>
+      <CarImage />
+    </StyledImageContainer>
 
-    <h4>
-      {first_name} {last_name}
-    </h4>
     <div>
-      <p>Brand {car_model}</p>
-      <p>Year {car_model_year}</p>
-      <p>
-        Color <Color color={car_color} />
-      </p>
-    </div>
-    <div>
-      <p>Country {country}</p>
-      <p>Gender {gender}</p>
-      <p>Job {job_title}</p>
-    </div>
-    <div>
-      <p>Email:{email}</p>
-      <p>Bio: {bio}</p>
+      <h4>
+        {first_name} {last_name}
+      </h4>
+      <div>
+        <p>Brand {car_model}</p>
+        <p>Year {car_model_year}</p>
+        <p>
+          Color <Color color={car_color} />
+        </p>
+      </div>
+      <div>
+        <p>Country {country}</p>
+        <p>Gender {gender}</p>
+        <p>Job {job_title}</p>
+      </div>
+      <div>
+        <p>Email:{email}</p>
+        <p>Bio: {bio}</p>
+      </div>
     </div>
   </StyledCarOwner>
 );
