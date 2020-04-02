@@ -22,6 +22,13 @@ const StyledFilter = styled.div`
   }
 `;
 
+const StyledGender = styled.p`
+  text-transform: capitalize;
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+`;
+
 const Filter = ({ start_year, end_year, gender, countries, colors }) => {
   const countryList = countries.split(',');
   const colorList = colors.split(',');
@@ -31,7 +38,7 @@ const Filter = ({ start_year, end_year, gender, countries, colors }) => {
       <h3>
         {start_year} - {end_year}
       </h3>
-      <p>{gender}</p>
+      <StyledGender>{gender}</StyledGender>
       <div>
         {countryList.map(country => (
           <Country key={v4()} country={country} />
