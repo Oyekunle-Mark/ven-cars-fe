@@ -26,7 +26,7 @@ const StyledApp = styled.div`
 `;
 
 const StyledContainer = styled.div`
-  max-width: 500px;
+  max-width: 600px;
   margin-top: 20px;
 `;
 

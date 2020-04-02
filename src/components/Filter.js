@@ -14,7 +14,7 @@ const StyledFilter = styled.div`
   background: #ffffff;
   padding: 20px;
   margin: 10px 0;
-  width: 500px;
+  width: 600px;
   border-radius: 10px;
 
   -webkit-box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);

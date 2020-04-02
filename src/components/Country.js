@@ -3,10 +3,13 @@ import Prop from 'prop-types';
 import styled from 'styled-components';
 
 const StyledCountry = styled.span`
+  display: flex;
+  flex-direction: row;
+
   font-size: 16px;
   background: #dedede;
-  
-  padding: 5px;
+  border-radius: 8px;
+  padding: 5px 10px;
 `;
 
 const Country = ({ country }) => <StyledCountry>{country}</StyledCountry>;
