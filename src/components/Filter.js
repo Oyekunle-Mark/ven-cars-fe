@@ -13,8 +13,13 @@ const StyledFilter = styled.div`
 
   background: #ffffff;
   padding: 20px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   width: 500px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
+  -moz-box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
+  box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
 
   h3 {
     font-size: 24px;
