@@ -1,9 +1,27 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
+import styled from "styled-components";
 
 import FiltersContainer from './containers/FiltersContainer';
 import CarOwnersContainer from './containers/CarOwnersContainer';
+
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #fafafa;
+  color: #040404;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`;
 
 function App() {
   const [carState, setCarState] = useState({
