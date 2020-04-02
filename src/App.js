@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
 
 function App() {
@@ -16,9 +16,17 @@ function App() {
       loading: false,
       filters: response.data,
     });
-  });
+  }, []);
 
-  return <div>Get started!</div>;
+  useEffect(() => {
+    fetchFilters();
+  }, []);
+
+  return carState.loading ? (
+    <div>Loading...</div>
+  ) : (
+    <div>Fetched successfully</div>
+  );
 }
 
 export default App;
