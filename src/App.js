@@ -16,7 +16,7 @@ function App() {
 
     setCarState({
       loading: false,
-      filters: response.data,
+      filters: response.data.data,
     });
   }, []);
 
@@ -27,7 +27,7 @@ function App() {
   return carState.loading ? (
     <div>Loading...</div>
   ) : (
-    carState.filters.map(filter => <Filter />)
+    carState.filters.map(filter => <Filter key={filter.id} />)
   );
 }
 
