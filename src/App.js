@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 // import { Route } from "react-router-dom";
 import axios from 'axios';
 
-import Filter from './components/Filter';
+import FiltersContainer from './containers/FiltersContainer';
 
 function App() {
   const [carState, setCarState] = useState({
@@ -28,7 +28,7 @@ function App() {
   return carState.loading ? (
     <div>Loading...</div>
   ) : (
-    carState.filters.map(filter => <Filter key={filter.id} {...filter} />)
+    <FiltersContainer filters={carState.filters} />
   );
 }
 
