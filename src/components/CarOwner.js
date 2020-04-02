@@ -60,6 +60,24 @@ const StyledCarMeta = styled.div`
   }
 `;
 
+const StyledOwnerMetaContainer = styled.div`
+  display: flex;
+
+  margin-bottom: 10px;
+`;
+
+const StyledOwnerMeta = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 10px;
+
+  p {
+    color: #7b7b7b;
+    margin-bottom: 5px;
+  }
+`;
+
 const CarOwner = ({
   first_name,
   last_name,
@@ -94,11 +112,21 @@ const CarOwner = ({
         </StyledCarMeta>
       </StyledCarMetaContainer>
 
-      <div>
-        <p>Country {country}</p>
-        <p>Gender {gender}</p>
-        <p>Job {job_title}</p>
-      </div>
+      <StyledOwnerMetaContainer>
+        <StyledOwnerMeta>
+          <p>Country</p>
+          <span>{country}</span>
+        </StyledOwnerMeta>
+        <StyledOwnerMeta>
+          <p>Gender</p>
+          <span>{gender}</span>
+        </StyledOwnerMeta>
+        <StyledOwnerMeta>
+          <p>Job</p>
+          <span>{job_title}</span>
+        </StyledOwnerMeta>
+      </StyledOwnerMetaContainer>
+
       <div>
         <p>Email:{email}</p>
         <p>Bio: {bio}</p>
