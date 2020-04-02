@@ -11,7 +11,9 @@ const StyledCountry = styled.span`
   text-transform: capitalize;
 `;
 
-const Country = ({ country }) => <StyledCountry>{country}</StyledCountry>;
+const Country = ({ country }) => {
+  return country && <StyledCountry>{country}</StyledCountry>;
+};
 
 Country.propTypes = {
   country: Prop.string.isRequired,
