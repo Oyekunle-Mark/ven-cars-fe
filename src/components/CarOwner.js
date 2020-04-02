@@ -1,4 +1,5 @@
 import React from 'react';
+import Prop from 'prop-types';
 
 const CarOwner = ({
   first_name,
@@ -32,5 +33,18 @@ const CarOwner = ({
     </div>
   </div>
 );
+
+CarOwner.propTypes = {
+  first_name: Prop.string.isRequired,
+  last_name: Prop.string.isRequired,
+  email: Prop.string.isRequired,
+  country: Prop.string.isRequired,
+  car_color: Prop.string.isRequired,
+  car_model: Prop.string.isRequired,
+  car_model_year: Prop.string.isRequired,
+  gender: Prop.string.isRequired,
+  job_title: Prop.string.isRequired,
+  bio: Prop.string.isRequired,
+};
 
 export default CarOwner;
