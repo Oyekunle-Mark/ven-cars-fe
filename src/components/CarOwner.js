@@ -3,6 +3,7 @@ import Prop from 'prop-types';
 import styled from 'styled-components';
 
 import Color from './Color';
+import CarImage from './CarImage';
 
 const StyledCarOwner = styled.div`
   display: flex;
@@ -37,6 +38,8 @@ const CarOwner = ({
   bio,
 }) => (
   <StyledCarOwner>
+    <CarImage />
+
     <h4>
       {first_name} {last_name}
     </h4>
