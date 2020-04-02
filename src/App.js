@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import FiltersContainer from './containers/FiltersContainer';
+import CarOwnersContainer from './containers/CarOwnersContainer';
 
 function App() {
   const [carState, setCarState] = useState({
@@ -26,17 +27,24 @@ function App() {
   }, []);
 
   return (
-    <Route
-      exact
-      path="/"
-      render={props =>
-        carState.loading ? (
-          <div>Loading...</div>
-        ) : (
-          <FiltersContainer {...props} filters={carState.filters} />
-        )
-      }
-    />
+    <div>
+      <Route
+        exact
+        path="/"
+        render={props =>
+          carState.loading ? (
+            <div>Loading...</div>
+          ) : (
+            <FiltersContainer {...props} filters={carState.filters} />
+          )
+        }
+      />
+
+      <Route
+        path="/filter/:id"
+        render={props => <CarOwnersContainer {...props} />}
+      />
+    </div>
   );
 }
 
