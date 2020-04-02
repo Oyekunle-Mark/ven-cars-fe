@@ -25,7 +25,15 @@ const CarOwnersContainer = () => {
     fetchCars();
   }, []);
 
-  return <div>This is a car owner container for filter {id}</div>;
+  return cars.loading ? (
+    <div>Loading...</div>
+  ) : (
+    cars.filteredCars.map(car => (
+      <div key={car.id}>
+        {car.first_name} {car.last_name}
+      </div>
+    ))
+  );
 };
 
 export default CarOwnersContainer;
