@@ -12,6 +12,13 @@ const colorMap = {
   aquamarine: '#84fed5',
   orange: '#fb572f',
   mauv: '#b685a5',
+  indigo: '#4b0082',
+  turquoise: '#40E0D0',
+  crimson: '#dc143c',
+  purple: '#800080',
+  khaki: '#c3b091',
+  fuscia: ' #FF00FF',
+  puce: '#CC8899',
 };
 
 const Color = ({ color }) => {
