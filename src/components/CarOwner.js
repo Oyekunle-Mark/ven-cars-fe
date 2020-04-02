@@ -30,7 +30,17 @@ const StyledImageContainer = styled.div`
 const StyledOwnerDetails = styled.div`
   h4 {
     font-size: 18px;
+    margin-bottom: 5px;
   }
+`;
+
+const StyledCarMetaContainer = styled.div`
+  display: flex;
+`;
+
+const StyledCarMeta = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const CarOwner = ({
@@ -54,13 +64,15 @@ const CarOwner = ({
       <h4>
         {first_name} {last_name}
       </h4>
-      <div>
-        <p>Brand {car_model}</p>
-        <p>Year {car_model_year}</p>
-        <p>
+
+      <StyledCarMetaContainer>
+        <StyledCarMeta>Brand {car_model}</StyledCarMeta>
+        <StyledCarMeta>Year {car_model_year}</StyledCarMeta>
+        <StyledCarMeta>
           Color <Color color={car_color} />
-        </p>
-      </div>
+        </StyledCarMeta>
+      </StyledCarMetaContainer>
+
       <div>
         <p>Country {country}</p>
         <p>Gender {gender}</p>
