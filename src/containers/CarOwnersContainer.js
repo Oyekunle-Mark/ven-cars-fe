@@ -1,9 +1,10 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const CarOwnersContainer = () => (
-    <div>
-        This is a car owner container.
-    </div>
-)
+const CarOwnersContainer = () => {
+  const { id } = useParams();
+
+  return <div>This is a car owner container for filter {id}</div>;
+};
 
 export default CarOwnersContainer;
