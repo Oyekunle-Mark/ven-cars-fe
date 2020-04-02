@@ -14,7 +14,18 @@ const colorMap = {
   mauv: '#b685a5',
 };
 
-const Color = ({ color }) => <span>{color}</span>;
+const Color = ({ color }) => {
+  const colorStyle = {
+    backgroundColor: colorMap[color.toLowerCase()],
+    width: 15,
+    height: 15,
+    borderRadius: '50%',
+    marginRight: 2,
+    marginLeft: 2,
+  };
+
+  return <span style={colorStyle}></span>;
+};
 
 Color.propTypes = {
   color: Prop.string.isRequired,
