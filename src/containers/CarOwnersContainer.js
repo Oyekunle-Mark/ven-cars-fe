@@ -17,7 +17,7 @@ const CarOwnersContainer = () => {
 
     setCars({
       loading: false,
-      filters: response.data.data,
+      filteredCars: response.data.data,
     });
   });
 
