@@ -10,9 +10,15 @@ const StyledFiltersContainer = styled.div`
   flex-direction: column;
 `;
 
+const StyledFilterHeader = styled.h2`
+  font-size: 30px;
+`;
+
 const FiltersContainer = ({ filters }) => {
   return (
     <StyledFiltersContainer>
+      <StyledFilterHeader>Filter</StyledFilterHeader>
+
       {filters.map(filter => (
         <Link key={filter.id} to={`/filter/${filter.id}`}>
           <Filter {...filter} />
