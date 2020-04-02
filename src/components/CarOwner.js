@@ -1,7 +1,28 @@
 import React from 'react';
 import Prop from 'prop-types';
+import styled from 'styled-components';
 
 import Color from './Color';
+
+const StyledCarOwner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+  width: 600px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
+  -moz-box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
+  box-shadow: 0px 2px 3px 2px rgba(222, 222, 222, 1);
+
+  h4 {
+    font-size: 18px;
+  }
+`;
 
 const CarOwner = ({
   first_name,
@@ -15,7 +36,7 @@ const CarOwner = ({
   job_title,
   bio,
 }) => (
-  <div>
+  <StyledCarOwner>
     <h4>
       {first_name} {last_name}
     </h4>
@@ -35,7 +56,7 @@ const CarOwner = ({
       <p>Email:{email}</p>
       <p>Bio: {bio}</p>
     </div>
-  </div>
+  </StyledCarOwner>
 );
 
 CarOwner.propTypes = {
