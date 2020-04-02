@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-// import { Route } from "react-router-dom";
+import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import FiltersContainer from './containers/FiltersContainer';
@@ -25,10 +25,18 @@ function App() {
     fetchFilters();
   }, []);
 
-  return carState.loading ? (
-    <div>Loading...</div>
-  ) : (
-    <FiltersContainer filters={carState.filters} />
+  return (
+    <Route
+      exact
+      path="/"
+      render={props =>
+        carState.loading ? (
+          <div>Loading...</div>
+        ) : (
+          <FiltersContainer {...props} filters={carState.filters} />
+        )
+      }
+    />
   );
 }
 
