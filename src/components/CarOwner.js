@@ -1,6 +1,8 @@
 import React from 'react';
 import Prop from 'prop-types';
 
+import Color from './Color';
+
 const CarOwner = ({
   first_name,
   last_name,
@@ -20,7 +22,9 @@ const CarOwner = ({
     <div>
       <p>Brand {car_model}</p>
       <p>Year {car_model_year}</p>
-      <p>Color {car_color}</p>
+      <p>
+        Color <Color color={car_color} />
+      </p>
     </div>
     <div>
       <p>Country {country}</p>
