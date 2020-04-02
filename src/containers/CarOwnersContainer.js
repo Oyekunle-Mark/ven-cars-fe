@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
+import CarOwer from '../components/CarOwner';
+
 const CarOwnersContainer = () => {
   const [cars, setCars] = useState({
     loading: true,
@@ -25,14 +27,14 @@ const CarOwnersContainer = () => {
     fetchCars();
   }, []);
 
-  return cars.loading ? (
-    <div>Loading...</div>
-  ) : (
-    cars.filteredCars.map(car => (
-      <div key={car.id}>
-        {car.first_name} {car.last_name}
-      </div>
-    ))
+  return (
+    <div>
+      {cars.loading ? (
+        <div>Loading...</div>
+      ) : (
+        cars.filteredCars.map(car => <CarOwer key={car.id} {...car} />)
+      )}
+    </div>
   );
 };
 
