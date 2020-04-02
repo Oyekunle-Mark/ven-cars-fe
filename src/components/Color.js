@@ -19,6 +19,7 @@ const colorMap = {
   khaki: '#c3b091',
   fuscia: ' #FF00FF',
   puce: '#CC8899',
+  goldenrod: '#daa520',
 };
 
 const Color = ({ color }) => {
