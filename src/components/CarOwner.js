@@ -60,10 +60,6 @@ const StyledCarMeta = styled.div`
   }
 `;
 
-const StyledCarMetaColor = styled.div`
-  width: 10px;
-`;
-
 const CarOwner = ({
   first_name,
   last_name,
@@ -94,10 +90,7 @@ const CarOwner = ({
           <p>Year</p> <span>{car_model_year}</span>
         </StyledCarMeta>
         <StyledCarMeta>
-          <p>Color</p>
-          <StyledCarMetaColor>
-            <Color color={car_color} />
-          </StyledCarMetaColor>
+          <p>Color</p> <Color color={car_color} />
         </StyledCarMeta>
       </StyledCarMetaContainer>
 
