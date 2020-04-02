@@ -1,4 +1,5 @@
 import React from 'react';
+import Prop from 'prop-types';
 
 const Filter = ({ start_year, end_year, gender, countries, colors }) => {
   const countryList = countries.split(',');
@@ -22,6 +23,14 @@ const Filter = ({ start_year, end_year, gender, countries, colors }) => {
       </div>
     </div>
   );
+};
+
+Filter.propTypes = {
+  start_year: Prop.number.isRequired,
+  end_year: Prop.number.isRequired,
+  gender: Prop.string.isRequired,
+  colors: Prop.string.isRequired,
+  countries: Prop.string.isRequired,
 };
 
 export default Filter;
