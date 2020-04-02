@@ -8,6 +8,7 @@ const StyledCountry = styled.span`
   border-radius: 12px;
   padding: 5px 10px;
   margin: 0 5px;
+  text-transform: capitalize;
 `;
 
 const Country = ({ country }) => <StyledCountry>{country}</StyledCountry>;
