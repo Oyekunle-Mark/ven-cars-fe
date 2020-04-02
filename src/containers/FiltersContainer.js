@@ -1,18 +1,26 @@
 import React from 'react';
 import Prop from 'prop-types';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Filter from '../components/Filter';
 
+const StyledFiltersContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px;
+`;
+
 const FiltersContainer = ({ filters }) => {
   return (
-    <div>
+    <StyledFiltersContainer>
       {filters.map(filter => (
         <Link key={filter.id} to={`/filter/${filter.id}`}>
           <Filter {...filter} />
         </Link>
       ))}
-    </div>
+    </StyledFiltersContainer>
   );
 };
 
