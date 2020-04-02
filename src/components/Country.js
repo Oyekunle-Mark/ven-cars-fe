@@ -1,7 +1,7 @@
 import React from 'react';
 import Prop from 'prop-types';
 
-const Country = ({ country }) => <div>{country}</div>;
+const Country = ({ country }) => <span>{country}</span>;
 
 Country.propTypes = {
   country: Prop.string.isRequired,
