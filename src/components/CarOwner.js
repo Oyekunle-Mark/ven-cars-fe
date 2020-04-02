@@ -46,6 +46,14 @@ const StyledCarMetaContainer = styled.div`
   display: flex;
 
   margin-bottom: 10px;
+
+  div {
+    border-right: 1px solid black;
+  }
+
+  div:last-child {
+    border-right: 0;
+  }
 `;
 
 const StyledCarMeta = styled.div`
@@ -53,6 +61,7 @@ const StyledCarMeta = styled.div`
   flex-direction: column;
 
   margin-right: 10px;
+  padding-right: 10px;
 
   p {
     color: #7b7b7b;
