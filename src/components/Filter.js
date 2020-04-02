@@ -34,6 +34,13 @@ const StyledGender = styled.p`
   font-weight: bold;
 `;
 
+const StyledCountries = styled.div`
+  display: flex;
+  justify-content: center;
+
+  margin: 5px 0;
+`;
+
 const Filter = ({ start_year, end_year, gender, countries, colors }) => {
   const countryList = countries.split(',');
   const colorList = colors.split(',');
@@ -44,11 +51,11 @@ const Filter = ({ start_year, end_year, gender, countries, colors }) => {
         {start_year} - {end_year}
       </h3>
       <StyledGender>{gender}</StyledGender>
-      <div>
+      <StyledCountries>
         {countryList.map(country => (
           <Country key={v4()} country={country} />
         ))}
-      </div>
+      </StyledCountries>
       <div>
         {colorList.map(color => (
           <Color key={v4()} color={color} />
