@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import Spinner from 'react-spinner-material';
 
 import CarOwer from '../components/CarOwner';
 
@@ -40,7 +41,7 @@ const CarOwnersContainer = () => {
   return (
     <StyledCarOwnersContainer>
       {cars.loading ? (
-        <div>Loading...</div>
+        <Spinner radius={50} color={'#040404'} stroke={2} visible={true} />
       ) : (
         <div>
           <StyledCarOwnerHeader>Car Owners</StyledCarOwnerHeader>
