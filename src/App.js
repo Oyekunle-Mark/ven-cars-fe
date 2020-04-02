@@ -15,7 +15,7 @@ const StyledApp = styled.div`
   min-width: 100vw;
   background: #fafafa;
   color: #040404;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Anaheim', sans-serif;
   font-size: 16px;
 
   a {
