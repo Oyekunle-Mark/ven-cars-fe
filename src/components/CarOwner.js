@@ -32,6 +32,14 @@ const StyledOwnerDetails = styled.div`
     font-size: 18px;
     margin-bottom: 5px;
   }
+
+  p {
+    font-size: 14px;
+  }
+
+  span {
+    font-size: 14px;
+  }
 `;
 
 const StyledCarMetaContainer = styled.div`
@@ -41,6 +49,11 @@ const StyledCarMetaContainer = styled.div`
 const StyledCarMeta = styled.div`
   display: flex;
   flex-direction: column;
+
+  p {
+    color: #7b7b7b;
+    margin-bottom: 5px;
+  }
 `;
 
 const CarOwner = ({
@@ -66,10 +79,17 @@ const CarOwner = ({
       </h4>
 
       <StyledCarMetaContainer>
-        <StyledCarMeta>Brand {car_model}</StyledCarMeta>
-        <StyledCarMeta>Year {car_model_year}</StyledCarMeta>
         <StyledCarMeta>
-          Color <Color color={car_color} />
+          <p>Brand</p> <span>{car_model}</span>
+        </StyledCarMeta>
+        <StyledCarMeta>
+          <p>Year</p> <span>{car_model_year}</span>
+        </StyledCarMeta>
+        <StyledCarMeta>
+          <p>Color</p>{' '}
+          <span>
+            <Color color={car_color} />
+          </span>
         </StyledCarMeta>
       </StyledCarMetaContainer>
 
