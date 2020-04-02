@@ -1,8 +1,19 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
+import Spinner from 'react-spinner-material';
 
 import CarOwer from '../components/CarOwner';
+
+const StyledCarOwnersContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledCarOwnerHeader = styled.h2`
+  font-size: 30px;
+`;
 
 const CarOwnersContainer = () => {
   const [cars, setCars] = useState({
@@ -28,13 +39,18 @@ const CarOwnersContainer = () => {
   }, []);
 
   return (
-    <div>
+    <StyledCarOwnersContainer>
       {cars.loading ? (
-        <div>Loading...</div>
+        <Spinner radius={50} color={'#040404'} stroke={2} visible={true} />
       ) : (
-        cars.filteredCars.map(car => <CarOwer key={car.id} {...car} />)
+        <div>
+          <StyledCarOwnerHeader>Car Owners</StyledCarOwnerHeader>
+          {cars.filteredCars.map(car => (
+            <CarOwer key={car.id} {...car} />
+          ))}
+        </div>
       )}
-    </div>
+    </StyledCarOwnersContainer>
   );
 };
 
