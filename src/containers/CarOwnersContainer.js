@@ -21,6 +21,10 @@ const CarOwnersContainer = () => {
     });
   });
 
+  useEffect(() => {
+    fetchCars();
+  }, []);
+
   return <div>This is a car owner container for filter {id}</div>;
 };
 
