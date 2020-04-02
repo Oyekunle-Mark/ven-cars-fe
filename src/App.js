@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
+import Spinner from 'react-spinner-material';
 
 import FiltersContainer from './containers/FiltersContainer';
 import CarOwnersContainer from './containers/CarOwnersContainer';
@@ -58,7 +59,12 @@ function App() {
             path="/"
             render={props =>
               carState.loading ? (
-                <div>Loading...</div>
+                <Spinner
+                  radius={50}
+                  color={'#040404'}
+                  stroke={2}
+                  visible={true}
+                />
               ) : (
                 <FiltersContainer {...props} filters={carState.filters} />
               )
