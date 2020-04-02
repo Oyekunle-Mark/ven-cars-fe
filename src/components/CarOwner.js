@@ -78,6 +78,28 @@ const StyledOwnerMeta = styled.div`
   }
 `;
 
+const StyledImageBioContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledImageBio = styled.div`
+  display: flex;
+
+  p {
+    color: #7b7b7b;
+    margin-bottom: 5px;
+    margin-right: 3px;
+  }
+
+  span {
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+`;
+
 const CarOwner = ({
   first_name,
   last_name,
@@ -127,10 +149,14 @@ const CarOwner = ({
         </StyledOwnerMeta>
       </StyledOwnerMetaContainer>
 
-      <div>
-        <p>Email:{email}</p>
-        <p>Bio: {bio}</p>
-      </div>
+      <StyledImageBioContainer>
+        <StyledImageBio>
+          <p>Email: </p> <span>{email}</span>
+        </StyledImageBio>
+        <StyledImageBio>
+          <p>Bio: </p> <span>{bio}</span>
+        </StyledImageBio>
+      </StyledImageBioContainer>
     </StyledOwnerDetails>
   </StyledCarOwner>
 );
